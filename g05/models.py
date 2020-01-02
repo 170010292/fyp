@@ -319,16 +319,16 @@ class Movieticket(models.Model):
         db_table = 'movieticket'
 
 
-class Paymentid(models.Model):
+class Payment(models.Model):
     paymentid = models.AutoField(primary_key=True)
-    userid = models.PositiveIntegerField()
+    id = models.ForeignKey(AuthUser, models.DO_NOTHING, db_column='id')
     paymentdate = models.DateTimeField()
     amount = models.DecimalField(max_digits=10, decimal_places=0)
     ticketid = models.ForeignKey('Ticket', models.DO_NOTHING, db_column='ticketid')
 
     class Meta:
         managed = False
-        db_table = 'paymentid'
+        db_table = 'payment'
 
 
 class Showcompany(models.Model):
@@ -490,18 +490,3 @@ class Travelagency(models.Model):
     class Meta:
         managed = False
         db_table = 'travelagency'
-
-
-class User(models.Model):
-    userid = models.AutoField(primary_key=True)
-    username = models.CharField(max_length=50)
-    passwords = models.CharField(max_length=50)
-    firstname = models.CharField(max_length=50)
-    lastname = models.CharField(max_length=50)
-    birth = models.DateField()
-    email = models.CharField(max_length=100)
-    phone = models.CharField(max_length=50)
-
-    class Meta:
-        managed = False
-        db_table = 'user'
