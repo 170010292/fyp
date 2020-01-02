@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ee2e90c8-85e0-4ac3-8d7f-a5e40e1398d6" name="fyp" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/g05/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/g05/admin.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\fyp\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Vpux1x2XDhAjVusEEUXCytPx3m" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunManager">
+    <configuration name="fyp" type="Python.DjangoServer" factoryName="Django server">
+      <module name="fyp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee2e90c8-85e0-4ac3-8d7f-a5e40e1398d6" name="Default Changelist" comment="" />
+      <created>1577962600982</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577962600982</updated>
+      <workItem from="1577962604226" duration="5310000" />
+    </task>
+    <task id="LOCAL-00001" summary="202001022113">
+      <created>1577970844935</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577970844935</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="202001022113" />
+    <option name="LAST_COMMIT_MESSAGE" value="202001022113" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="372" y="22" key="CommitChangelistDialog2" timestamp="1577971654704">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="372" y="22" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1577971654704" />
+    <state x="136" y="64" width="1152" height="688" key="DiffContextDialog" timestamp="1577970969613">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="136" y="64" width="1152" height="688" key="DiffContextDialog/0.0.1440.860@0.0.1440.860" timestamp="1577970969613" />
+    <state x="500" y="184" key="FileChooserDialogImpl" timestamp="1577963835600">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="500" y="184" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1577963835600" />
+    <state x="585" y="319" key="Github.ShareDialog" timestamp="1577963957445">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="585" y="319" key="Github.ShareDialog/0.0.1440.860@0.0.1440.860" timestamp="1577963957445" />
+    <state x="471" y="134" key="Github.UntrackedFilesDialog" timestamp="1577963986009">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="471" y="134" key="Github.UntrackedFilesDialog/0.0.1440.860@0.0.1440.860" timestamp="1577963986009" />
+    <state x="221" y="61" key="SettingsEditor" timestamp="1577963837504">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="221" y="61" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1577963837504" />
+    <state x="602" y="345" key="VCS.EditChangelistDialog" timestamp="1577971669508">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="602" y="345" key="VCS.EditChangelistDialog/0.0.1440.860@0.0.1440.860" timestamp="1577971669508" />
+    <state x="312" y="162" key="Vcs.Push.Dialog.v2" timestamp="1577971089194">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="312" y="162" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1577971089194" />
+    <state x="92" y="92" width="1256" height="676" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1577970969613">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="92" y="92" width="1256" height="676" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1440.860@0.0.1440.860" timestamp="1577970969613" />
+    <state x="407" y="252" key="com.intellij.ide.util.TipDialog" timestamp="1577962613938">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="407" y="252" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1577962613938" />
+    <state x="517" y="293" key="git4idea.rebase.GitRebaseDialog" timestamp="1577965294869">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="517" y="293" key="git4idea.rebase.GitRebaseDialog/0.0.1440.860@0.0.1440.860" timestamp="1577965294869" />
+  </component>
+</project>
