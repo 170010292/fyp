@@ -190,6 +190,63 @@ class DjangoSession(models.Model):
         db_table = 'django_session'
 
 
+class Food(models.Model):
+    foodid = models.CharField(primary_key=True, max_length=10)
+    foodcompanyid = models.ForeignKey('Foodcompany', models.DO_NOTHING, db_column='foodcompanyid')
+    foodname = models.CharField(max_length=50)
+
+    class Meta:
+        managed = False
+        db_table = 'food'
+
+
+class Foodcompany(models.Model):
+    foodcompanyid = models.CharField(primary_key=True, max_length=3)
+    foodcompanyname = models.CharField(max_length=200)
+    foodcompanyno = models.CharField(max_length=8)
+    foodcompanyaddress = models.CharField(max_length=200)
+    foodcompanyemail = models.CharField(max_length=200)
+
+    class Meta:
+        managed = False
+        db_table = 'foodcompany'
+
+
+class Fooddelivered(models.Model):
+    foodid = models.ForeignKey(Food, models.DO_NOTHING, db_column='foodid')
+    fooddeliveredid = models.CharField(primary_key=True, max_length=10)
+    calltime = models.DateTimeField()
+    price = models.DecimalField(max_digits=10, decimal_places=0)
+
+    class Meta:
+        managed = False
+        db_table = 'fooddelivered'
+
+
+class Hotel(models.Model):
+    hotelid = models.CharField(primary_key=True, max_length=10)
+    hotelname = models.CharField(max_length=50)
+    hoteladdress = models.CharField(max_length=200)
+    hotelno = models.CharField(max_length=8)
+    hotelemail = models.CharField(max_length=200)
+
+    class Meta:
+        managed = False
+        db_table = 'hotel'
+
+
+class Hotelticket(models.Model):
+    hotelticketid = models.CharField(primary_key=True, max_length=10)
+    hotelid = models.ForeignKey(Hotel, models.DO_NOTHING, db_column='hotelid')
+    hotelroom = models.CharField(max_length=5)
+    startdate = models.DateTimeField()
+    enddate = models.DateTimeField()
+
+    class Meta:
+        managed = False
+        db_table = 'hotelticket'
+
+
 class Meal(models.Model):
     mealid = models.CharField(primary_key=True, max_length=3)
     mealname = models.CharField(max_length=50)
@@ -262,6 +319,18 @@ class Movieticket(models.Model):
         db_table = 'movieticket'
 
 
+class Paymentid(models.Model):
+    paymentid = models.AutoField(primary_key=True)
+    userid = models.PositiveIntegerField()
+    paymentdate = models.DateTimeField()
+    amount = models.DecimalField(max_digits=10, decimal_places=0)
+    ticketid = models.ForeignKey('Ticket', models.DO_NOTHING, db_column='ticketid')
+
+    class Meta:
+        managed = False
+        db_table = 'paymentid'
+
+
 class Showcompany(models.Model):
     showcompanyid = models.AutoField(primary_key=True)
     showcompanyname = models.CharField(max_length=200)
@@ -298,6 +367,59 @@ class Showticket(models.Model):
     class Meta:
         managed = False
         db_table = 'showticket'
+
+
+class Themepark(models.Model):
+    themeparkid = models.CharField(primary_key=True, max_length=2)
+    themeparkcompanyid = models.ForeignKey('Themeparkcompany', models.DO_NOTHING, db_column='themeparkcompanyid')
+    themeparkname = models.CharField(max_length=50)
+    themeparkcompanyaddress = models.CharField(max_length=200)
+
+    class Meta:
+        managed = False
+        db_table = 'themepark'
+
+
+class Themeparkcompany(models.Model):
+    themeparkcompanyid = models.CharField(primary_key=True, max_length=2)
+    themeparkcompanyname = models.CharField(max_length=200)
+    themeparkcompanyaddress = models.CharField(max_length=200)
+    themeparkcompanyemail = models.CharField(max_length=200)
+    themeparkcompanyno = models.CharField(max_length=8)
+
+    class Meta:
+        managed = False
+        db_table = 'themeparkcompany'
+
+
+class Themeparkticket(models.Model):
+    themeparkid = models.ForeignKey(Themepark, models.DO_NOTHING, db_column='themeparkid')
+    themeparkticketid = models.CharField(primary_key=True, max_length=10)
+    effectivedate = models.DateField()
+    price = models.DecimalField(max_digits=10, decimal_places=0)
+    vip = models.IntegerField()
+
+    class Meta:
+        managed = False
+        db_table = 'themeparkticket'
+
+
+class Ticket(models.Model):
+    ticketid = models.AutoField(primary_key=True)
+    ticktype = models.CharField(max_length=20)
+    airplaneticketid = models.ForeignKey(Airplaneticket, models.DO_NOTHING, db_column='airplaneticketid')
+    movieticketid = models.ForeignKey(Movieticket, models.DO_NOTHING, db_column='movieticketid')
+    fooddeliveredid = models.ForeignKey(Fooddelivered, models.DO_NOTHING, db_column='fooddeliveredid')
+    transportticketid = models.ForeignKey('Transportticket', models.DO_NOTHING, db_column='transportticketid')
+    attractionticketid = models.ForeignKey(Attractionticket, models.DO_NOTHING, db_column='attractionticketid')
+    themeparkticketid = models.ForeignKey(Themeparkticket, models.DO_NOTHING, db_column='themeparkticketid')
+    tourgroupticketid = models.ForeignKey('Tourgroupticket', models.DO_NOTHING, db_column='tourgroupticketid')
+    hotelticketid = models.ForeignKey(Hotelticket, models.DO_NOTHING, db_column='hotelticketid')
+    showticketid = models.ForeignKey(Showticket, models.DO_NOTHING, db_column='showticketid')
+
+    class Meta:
+        managed = False
+        db_table = 'ticket'
 
 
 class Tourgroup(models.Model):
