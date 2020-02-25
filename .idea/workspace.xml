@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee2e90c8-85e0-4ac3-8d7f-a5e40e1398d6" name="fyp" comment="202001031955">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ee2e90c8-85e0-4ac3-8d7f-a5e40e1398d6" name="fyp" comment="202001031955" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -188,10 +186,11 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="92" y="92" width="1256" height="676" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1440.860@0.0.1440.860" timestamp="1577970969613" />
-    <state x="407" y="252" key="com.intellij.ide.util.TipDialog" timestamp="1578057889586">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state x="543" y="305" key="com.intellij.ide.util.TipDialog" timestamp="1582604043516">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="407" y="252" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1578057889586" />
+    <state x="543" y="305" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582604043516" />
     <state x="490" y="141" key="git4idea.branch.GitSmartOperationDialog" timestamp="1577973197842">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
