@@ -192,6 +192,7 @@ a {
     </style>
 </head>
 <body>
+
 	<div id="header">
 		<div>
 			<ul>
@@ -232,6 +233,15 @@ a {
 			</ul>
 		</div>
 	</div>
-    <p>Books: {{ num_AuthUser }} </p>
+    {% for a in Travels %}
+    <table>
+                <tr>
+                    <td> {{ a.airlinecompanyid }} </td>
+                    <td> {{ a.airlinecompanyname }} </td>
+                    <td> {{ a.airlinecompanyno }} </td>
+                    <td> {{ a.airlinecompanyemail }} </td>
+                </tr>
+    </table>
+    {% endfor %}
 </body>
 </html>
