@@ -1,236 +1,77 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Ticket On Cloud</title>
-<style>
-        body {
-	margin:0;
-	font-family:Arial, Helvetica, sans-serif;
-	background: url(https://fypprojectimages.s3.amazonaws.com/bg-body.jpg);
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="UTF-8">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <title>Ticket On Cloud</title>
+     <style>
+         body {
+ margin: 0;
+ padding: 0;
+ background: #e84118;
 }
-a {
-	outline:none;
+
+.buscar-caja {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background: #2f3640;
+ height: 40px;
+ border-radius: 40px;
+ padding: 10px;
 }
-/*------------------------- Header ---------------------------*/
-#header {
-	background:url(https://fypprojectimages.s3.amazonaws.com/bg-header.png) repeat-x;
-	height:184px;
-	margin:0;
+
+.buscar-caja:hover > .buscar-txt {
+ width: 240px;
+ padding: 0 6px;
 }
-#header div {
-	margin:0 auto;
-	padding:28px 0 0;
-	position:relative;
-	width:960px;
+
+.buscar-caja:hover > .buscar-btn {
+ background: white;
+ color: black;
 }
-#header div ul {
-	height:100px;
-	left:100px;
-	list-style:none;
-	margin:0;
-	overflow:hidden;
-	padding:0;
-	position:absolute;
-	top:80px;
+
+.buscar-btn {
+ color: #e84118;
+ float: right;
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ background: #2f3640;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: 0.4s;
+ color: white;
+ cursor: pointer;
 }
-#header div ul li:first-child {
-	margin:0;
+
+.buscar-btn > i {
+ font-size: 30px;
 }
-#header div ul li {
-	float:left;
-	height:66px;
-	margin:0 0 0 65px;
-	text-align:left;
-	position:relative;
+
+.buscar-txt {
+ border: none;
+ background: none;
+ outline: none;
+ float: left;
+ padding: 0;
+ color: white;
+ font-size: 16px;
+ transition: 0.4s;
+ line-height: 40px;
+ width: 0px;
+ font-weight: bold;
 }
-#header div ul li a {
-	color:#000;
-	font-family:oswaldregular;
-	font-size:18px;
-	line-height:24px;
-	text-decoration:none;
-	text-transform:uppercase;
-}
-#header div ul li.selected a, #header div ul li a:hover {
-	color:#af0000;
-}
-#header div ul li ul {
-	height:auto;
-	left:-99999px;
-	overflow:hidden;
-	position:absolute;
-	top:37px;
-	width:115px;
-}
-#header div ul li:hover ul {
-	left:0;
-	top:27px;
-}
-#header div ul li ul li {
-	background:none #343434;
-	border:1px solid #4f4f4f;
-	float:none;
-	height:29px;
-	margin:-1px 0 0;
-	padding:0 12px;
-	position:relative;
-	width:auto;
-	z-index:1000;
-}
-#header div ul li ul li:hover {
-	background:none #af0000;
-}
-#header div ul li ul li:hover {
-	left:0;
-	top:0;
-}
-#header div ul li ul li a {
-	color:#a5a5a5!important;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:12px;
-	line-height:28px;
-	text-transform:none;
-}
-#header div ul li ul li.selected a, #header div ul li ul li a:hover {
-	color:#fff!important;
-}
-/*------------------------- Body ---------------------------*/
-#body {
-	margin-top:10px!important;
-}
-.one{
-	background: url(https://fypprojectimages.s3.amazonaws.com/Travel.png) no-repeat;
-	height:300px;
-	text-align:center;
-	width:715px;
-	line-height:7;
-	font-size:48px;
-	float:left;
-}
-.one a{
-	color:#F70206;
-}
-.one a:hover{
-	color:#1124FF!important;
-}
-.two{
-	background: url(https://fypprojectimages.s3.amazonaws.com/Movie.png) no-repeat;
-	height:300px;
-	text-align:center;
-	width:600px;
-	line-height:7;
-	font-size:48px;
-	float: left;
-}
-.two a{
-	color:#F70206;
-}
-.two a:hover{
-	color:#1124FF!important;
-}
-.three{
-	background: url(https://fypprojectimages.s3.amazonaws.com/Show.jpg) no-repeat;
-	height:300px;
-	text-align:center;
-	width:550px;
-	line-height:7;
-	font-size:48px;
-	float:right;
-}
-.three a{
-	color:#F70206;
-}
-.three a:hover{
-	color:#1124FF!important;
-}
-.four{
-	background: url(https://fypprojectimages.s3.amazonaws.com/ThemePark.jpg) no-repeat;
-	height:360px;
-	text-align:center;
-	width:715px;
-	line-height:7;
-	font-size:48px;
-	float:left;
-}
-.four a{
-	color:#F70206;
-}
-.four a:hover{
-	color:#1124FF!important;
-}
-.five{
-	background: url(https://fypprojectimages.s3.amazonaws.com/Tour.jpg) no-repeat;
-	height:360px;
-	text-align:center;
-	width:600px;
-	line-height:7;
-	font-size:48px;
-	float:left;
-}
-.five a{
-	color:#F70206;
-}
-.five a:hover{
-	color:#1124FF!important;
-}
-.six{
-	background: url(https://fypprojectimages.s3.amazonaws.com/Food.jpg) no-repeat;
-	height:400px;
-	text-align:center;
-	width:550px;
-	line-height:7;
-	font-size:48px;
-	float:right;
-}
-.six a{
-	color:#F70206;
-}
-.six a:hover{
-	color:#1124FF!important;
-}
-    </style>
-</head>
-<body>
-	<div id="header">
-		<div>
-			<ul>
-				<li class="selected">
-					<a href="index">Home</a>
-				</li>
-				<li>
-					<a href="travel">Travel</a>
-					<ul>
-						<li>
-							<a href="#">Hotel</a>
-						</li>
-						<li>
-							<a href="#">Meal</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="food">Food</a>
-					<ul>
-						<li>
-							<a href="#">Transportation</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="movie">Movie</a>
-				</li>
-				<li>
-					<a href="themepark">ThemePark</a>
-				</li>
-				<li>
-					<a href="tour">Tour</a>
-				</li>
-				<li>
-					<a href="show">Show</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</body>
+         </style>
+ </head>
+ <body>
+  <div class="buscar-caja">
+   <input type="text" name="" class="buscar-txt" placeholder="Buscar..."/>
+   <a class="buscar-btn">
+    <i class="far fa-search"></i>
+   </a>
+  </div>
+ </body>
 </html>

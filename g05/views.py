@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from g05 .models import AuthUser , Airlinecompany
+from django.http import HttpResponseRedirect
+from g05 .models import AuthUser , Airplane, Airplaneticket
 from django.views import generic
+from django.contrib import auth
 
 # Create your views here.
 
@@ -9,7 +10,7 @@ def index(request):
     return render(request, 'index.html')
 
 def travel(request):
-    Travels = Airlinecompany.objects.all()
+    Airplanes = Airplaneticket.objects.all()
     return render(request, 'travel.html',locals())
 
 def movie(request):
@@ -26,3 +27,19 @@ def tour(request):
 
 def themepark(request):
     return render(request, 'themepark.html')
+
+def login(request):
+    if request.user.is_authenticated:
+        return HttpResponseRedirect('/')
+    username = request.POST.get('username', '')
+    password = request.POST.get('password', '')
+    user = auth.authenticate(username=username, password=password)
+    if user is not None and user.is_active:
+        auth.login(request, user)
+        return HttpResponseRedirect('/')
+    else:
+        return render(request, 'login.html', locals())
+
+def logout(request):
+    auth.logout(request)
+    return HttpResponseRedirect('/')

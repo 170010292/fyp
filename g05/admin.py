@@ -6,8 +6,14 @@ from .models import Airlinecompany, Airplane, Airplaneticket, Attraction, Attrac
 class Airline(admin.ModelAdmin):
     list_display = ('airlinecompanyname', 'airlinecompanyno', 'airlinecompanyaddress')
 
-admin.site.register(Airplane)
-admin.site.register(Airplaneticket)
+@admin.register(Airplane)
+class Airplane(admin.ModelAdmin):
+    list_display = ('airplaneid', 'airlinecompanyid', 'checkinport', 'meal')
+
+@admin.register(Airplaneticket)
+class Airplaneticket(admin.ModelAdmin):
+    list_display = ('airplaneticketid', 'airplaneid')
+
 admin.site.register(Attraction)
 admin.site.register(Attractioncompany)
 admin.site.register(Attractionticket)

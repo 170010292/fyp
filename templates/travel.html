@@ -8,6 +8,7 @@
 	margin:0;
 	font-family:Arial, Helvetica, sans-serif;
 	background: url(https://fypprojectimages.s3.amazonaws.com/bg-body.jpg);
+            color:#af0000;
 }
 a {
 	outline:none;
@@ -96,99 +97,7 @@ a {
 	color:#fff!important;
 }
 /*------------------------- Body ---------------------------*/
-#body {
-	margin-top:10px!important;
-}
-.one{
-	background: url(https://fypprojectimages.s3.amazonaws.com/Travel.png) no-repeat;
-	height:300px;
-	text-align:center;
-	width:715px;
-	line-height:7;
-	font-size:48px;
-	float:left;
-}
-.one a{
-	color:#F70206;
-}
-.one a:hover{
-	color:#1124FF!important;
-}
-.two{
-	background: url(https://fypprojectimages.s3.amazonaws.com/Movie.png) no-repeat;
-	height:300px;
-	text-align:center;
-	width:600px;
-	line-height:7;
-	font-size:48px;
-	float: left;
-}
-.two a{
-	color:#F70206;
-}
-.two a:hover{
-	color:#1124FF!important;
-}
-.three{
-	background: url(https://fypprojectimages.s3.amazonaws.com/Show.jpg) no-repeat;
-	height:300px;
-	text-align:center;
-	width:550px;
-	line-height:7;
-	font-size:48px;
-	float:right;
-}
-.three a{
-	color:#F70206;
-}
-.three a:hover{
-	color:#1124FF!important;
-}
-.four{
-	background: url(https://fypprojectimages.s3.amazonaws.com/ThemePark.jpg) no-repeat;
-	height:360px;
-	text-align:center;
-	width:715px;
-	line-height:7;
-	font-size:48px;
-	float:left;
-}
-.four a{
-	color:#F70206;
-}
-.four a:hover{
-	color:#1124FF!important;
-}
-.five{
-	background: url(https://fypprojectimages.s3.amazonaws.com/Tour.jpg) no-repeat;
-	height:360px;
-	text-align:center;
-	width:600px;
-	line-height:7;
-	font-size:48px;
-	float:left;
-}
-.five a{
-	color:#F70206;
-}
-.five a:hover{
-	color:#1124FF!important;
-}
-.six{
-	background: url(https://fypprojectimages.s3.amazonaws.com/Food.jpg) no-repeat;
-	height:400px;
-	text-align:center;
-	width:550px;
-	line-height:7;
-	font-size:48px;
-	float:right;
-}
-.six a{
-	color:#F70206;
-}
-.six a:hover{
-	color:#1124FF!important;
-}
+
     </style>
 </head>
 <body>
@@ -228,19 +137,36 @@ a {
 					<a href="tour">Tour</a>
 				</li>
 				<li>
-					<a href="show">Show</a>
+					<a href="admin">Admin</a>
 				</li>
 			</ul>
 		</div>
 	</div>
-    {% for a in Travels %}
+
     <table>
-                <tr>
-                    <td> {{ a.airlinecompanyid }} </td>
-                    <td> {{ a.airlinecompanyname }} </td>
-                    <td> {{ a.airlinecompanyno }} </td>
-                    <td> {{ a.airlinecompanyemail }} </td>
-                </tr>
+        <tr>
+            <th>機票ID</th>
+            <th>目的地</th>
+            <th>起飛時間</th>
+            <th>預計到達時間</th>
+            <th>飛機ID</th>
+            <th>價錢</th>
+            <th>座位</th>
+            <th>上機位置</th>
+            <th>購買</th>
+        </tr>
+        {% for b in Airplanes %}
+        <tr>
+            <td> {{ b.airplaneticketid }} </td>
+            <td> {{ b.destination }} </td>
+            <td> {{ b.starttime }} </td>
+            <td> {{ b.scheduledtime }} </td>
+            <td> {{ b.airplaneid }} </td>
+            <td> {{ b.price }} </td>
+            <td> {{ b.seat }} </td>
+            <td> {{ b.seatingplace }} </td>
+            <td><input type="submit" value="Buy"></td>
+        </tr>
     </table>
     {% endfor %}
 </body>

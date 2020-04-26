@@ -8,6 +8,7 @@
 	margin:0;
 	font-family:Arial, Helvetica, sans-serif;
 	background: url(https://fypprojectimages.s3.amazonaws.com/bg-body.jpg);
+            color:#af0000;
 }
 a {
 	outline:none;
@@ -97,98 +98,65 @@ a {
 }
 /*------------------------- Body ---------------------------*/
 #body {
-	margin-top:10px!important;
+	margin: 0;
+ padding: 0;
+ background: #e84118;
 }
-.one{
-	background: url(https://fypprojectimages.s3.amazonaws.com/Travel.png) no-repeat;
-	height:300px;
-	text-align:center;
-	width:715px;
-	line-height:7;
-	font-size:48px;
-	float:left;
+
+.buscar-caja {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background: #2f3640;
+ height: 40px;
+ border-radius: 40px;
+ padding: 10px;
 }
-.one a{
-	color:#F70206;
+
+.buscar-caja:hover > .buscar-txt {
+ width: 240px;
+ padding: 0 6px;
 }
-.one a:hover{
-	color:#1124FF!important;
+
+.buscar-caja:hover > .buscar-btn {
+ background: white;
+ color: black;
 }
-.two{
-	background: url(https://fypprojectimages.s3.amazonaws.com/Movie.png) no-repeat;
-	height:300px;
-	text-align:center;
-	width:600px;
-	line-height:7;
-	font-size:48px;
-	float: left;
+
+.buscar-btn {
+ color: #e84118;
+ float: right;
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ background: #2f3640;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: 0.4s;
+ color: white;
+ cursor: pointer;
 }
-.two a{
-	color:#F70206;
+
+.buscar-btn > i {
+ font-size: 30px;
 }
-.two a:hover{
-	color:#1124FF!important;
+
+.buscar-txt {
+ border: none;
+ background: none;
+ outline: none;
+ float: left;
+ padding: 0;
+ color: white;
+ font-size: 16px;
+ transition: 0.4s;
+ line-height: 40px;
+ width: 0px;
+ font-weight: bold;
 }
-.three{
-	background: url(https://fypprojectimages.s3.amazonaws.com/Show.jpg) no-repeat;
-	height:300px;
-	text-align:center;
-	width:550px;
-	line-height:7;
-	font-size:48px;
-	float:right;
-}
-.three a{
-	color:#F70206;
-}
-.three a:hover{
-	color:#1124FF!important;
-}
-.four{
-	background: url(https://fypprojectimages.s3.amazonaws.com/ThemePark.jpg) no-repeat;
-	height:360px;
-	text-align:center;
-	width:715px;
-	line-height:7;
-	font-size:48px;
-	float:left;
-}
-.four a{
-	color:#F70206;
-}
-.four a:hover{
-	color:#1124FF!important;
-}
-.five{
-	background: url(https://fypprojectimages.s3.amazonaws.com/Tour.jpg) no-repeat;
-	height:360px;
-	text-align:center;
-	width:600px;
-	line-height:7;
-	font-size:48px;
-	float:left;
-}
-.five a{
-	color:#F70206;
-}
-.five a:hover{
-	color:#1124FF!important;
-}
-.six{
-	background: url(https://fypprojectimages.s3.amazonaws.com/Food.jpg) no-repeat;
-	height:400px;
-	text-align:center;
-	width:550px;
-	line-height:7;
-	font-size:48px;
-	float:right;
-}
-.six a{
-	color:#F70206;
-}
-.six a:hover{
-	color:#1124FF!important;
-}
+
     </style>
 </head>
 <body>
@@ -227,18 +195,33 @@ a {
 					<a href="tour">Tour</a>
 				</li>
 				<li>
-					<a href="show">Show</a>
+					<a href="admin">Admin</a>
 				</li>
 			</ul>
 		</div>
 	</div>
 	<div id="body">
-		<div class="one"><a href="travel">Travel</a></div>
-		<div class="two"><a href="movie">Movie</a></div>
-		<div class="three"><a href="show">Show</a></div>
-		<div class="four"><a href="themepark">ThemePark</a></div>
-		<div class="five"><a href="tour">Tour</a></div>
-		<div class="six"><a href="food">Food</a></div>
+        <form action="https://www.gogle.com/search" method="get">
+		<div class="buscar-caja">
+                <input type="text" name="q"  class="buscar-txt" placeholder="Search..."/>
+                <a class="buscar-btn">
+                    <input type="submit" value="">
+                    <i class="far fa-search">
+                    </i>
+                </a>
+        </form>
+        </div>
 	</div>
+    <div>
+        {% if request.user.is_authenticated %}
+            <p>
+                {{request.user}} 您已經登入囉~
+                <a href="/accounts/logout/">登出</a>
+            </p>
+            <a href="travel/">售票列表</a>
+        {% else %}
+            <p>您尚未登入喔~<a href="/accounts/login/">登入</a></p>
+        {% endif %}
+    </div>
 </body>
 </html>
