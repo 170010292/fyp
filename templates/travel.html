@@ -146,6 +146,7 @@ a {
             <th>座位</th>
             <th>上機位置</th>
             <th>購買</th>
+            <th>改票</th>
         </tr>
         {% for b in Airplanes %}
         <tr>
@@ -157,7 +158,8 @@ a {
             <td> {{ b.price }} </td>
             <td> {{ b.seat }} </td>
             <td> {{ b.seatingplace }} </td>
-            <td><input type="submit" value="Buy"></td>
+            <td><a href="https://paypal.me/sunnymak1228?locale.x=zh_HK">Buy</td>
+            <td><button onclick="alert('聯絡客服:\nEmail: 170010292@stu.vtc.edu.hk\nPhoneNo.: 23332333')">Edit</button></td>
         </tr>
     </table>
     {% endfor %}
