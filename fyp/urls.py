@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from g05.views import index,travel,themepark,tour,show,movie,food,login,logout
+from g05.views import index,travel,themepark,tour,show,movie,food,login,logout,register
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +28,5 @@ urlpatterns = [
     path('food/', food),
     path('accounts/login/', login),
     path('accounts/logout/', logout),
+    path('accounts/register/', register),
 ]

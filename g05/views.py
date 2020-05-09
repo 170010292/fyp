@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from g05 .models import AuthUser , Airplane, Airplaneticket
 from django.views import generic
 from django.contrib import auth
+from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 
@@ -43,3 +44,13 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return HttpResponseRedirect('/')
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            return HttpResponseRedirect('/accounts/login/')
+    else:
+        form = UserCreationForm()
+    return render(request, 'register.html', locals())
