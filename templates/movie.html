@@ -137,5 +137,41 @@ a {
 			</ul>
 		</div>
 	</div>
+
+ <table>
+        <tr>
+            <th>MovieID</th>
+            <th>日期</th>
+            <th>開始時間</th>
+            <th>結束時間</th>
+            <th>戲院室</th>
+            <th>戲院座位</th>
+            <th>價錢</th>
+            <th>電影ID</th>
+            <th>戲院ID</th>
+            <th>購買</th>
+            <th>改票</th>
+        </tr>
+        {% for m in moviess %}
+        <tr>
+            <td> {{ m.movieticketid }} </td>
+            <td> {{ m.moviedate }} </td>
+            <td> {{ m.moviestarttime }} </td>
+            <td> {{ m.movieendtime }} </td>
+            <td> {{ m.movieroom }} </td>
+            <td> {{ m.movieseat }} </td>
+            <td> {{ m.price }} </td>
+            <td> {{ m.movieid }} </td>
+            <td>{{ m.theaterid }}</td>
+            <td>
+                {% if request.user.is_authenticated %}
+                <a href="https://paypal.me/sunnymak1228?locale.x=zh_HK">Buy</a>
+                    {% else %}
+                    <a href="/accounts/login/">Login&Buy</a>
+                {% endif %}</td>
+            <td><button onclick="alert('聯絡客服:\nEmail: 170010292@stu.vtc.edu.hk\nPhoneNo.: 23332333')">Edit</button></td>
+        </tr>
+    </table>
+    {% endfor %}
  </body>
 </html>

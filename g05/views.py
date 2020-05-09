@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from g05 .models import AuthUser , Airplane, Airplaneticket
+from g05 .models import AuthUser , Airplane, Airplaneticket,Movieticket
 from django.views import generic
 from django.contrib import auth
 from django.contrib.auth.forms import UserCreationForm
@@ -15,7 +15,8 @@ def travel(request):
     return render(request, 'travel.html',locals())
 
 def movie(request):
-    return render(request, 'movie.html')
+    moviess = Movieticket.objects.all()
+    return render(request, 'movie.html',locals())
 
 def food(request):
     return render(request, 'food.html')
