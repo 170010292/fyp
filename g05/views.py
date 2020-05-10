@@ -1,14 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from g05 .models import AuthUser , Airplane, Airplaneticket,Movieticket
-from django.views import generic
+from g05 .models import Airplaneticket,Movieticket
 from django.contrib import auth
 from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'index.html',locals())
 
 def travel(request):
     Airplanes = Airplaneticket.objects.all()
@@ -22,13 +21,13 @@ def food(request):
     return render(request, 'food.html')
 
 def show(request):
-    return render(request, 'show.html')
+    return render(request, 'show.html',locals())
 
 def tour(request):
-    return render(request, 'tour.html')
+    return render(request, 'tour.html',locals())
 
 def themepark(request):
-    return render(request, 'themepark.html')
+    return render(request, 'themepark.html',locals())
 
 def login(request):
     if request.user.is_authenticated:

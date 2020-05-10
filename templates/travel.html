@@ -7,8 +7,8 @@
         body {
 	margin:0;
 	font-family:Arial, Helvetica, sans-serif;
-	background: url(https://fypprojectimages.s3.amazonaws.com/bg-body.jpg);
-            color:#af0000;
+	background: url(https://fypprojectimages.s3.amazonaws.com/BGG.jpg);
+            color:#000000;
 }
 a {
 	outline:none;
@@ -96,8 +96,23 @@ a {
 #header div ul li ul li.selected a, #header div ul li ul li a:hover {
 	color:#fff!important;
 }
-/*------------------------- Body ---------------------------*/
+/*------------------------- Table ---------------------------*/
+         table{
+             width: 1920px;
+         }
 
+         tr th{
+	font-weight:bold;
+    }
+tr th, tr td{
+	padding:5px;
+}
+th{
+    border: 1px solid #000000;
+}
+td{
+	border: 1px solid #000000;
+}
     </style>
 </head>
 <body>
@@ -106,10 +121,10 @@ a {
 		<div>
 			<ul>
 				<li class="selected">
-					<a href="index">Home</a>
+					<a href="/">Home</a>
 				</li>
 				<li>
-					<a href="travel">Travel</a>
+					<a href="/travel">Travel</a>
 					<ul>
 						<li>
 							<a href="#">Hotel</a>
@@ -120,16 +135,19 @@ a {
 					</ul>
 				</li>
 				<li>
-					<a href="movie">Movie</a>
+					<a href="/movie">Movie</a>
 				</li>
 				<li>
-					<a href="themepark">ThemePark</a>
+					<a href="/themepark">ThemePark</a>
 				</li>
 				<li>
-					<a href="tour">Tour</a>
+					<a href="/tour">Tour</a>
 				</li>
 				<li>
-					<a href="admin">Admin</a>
+					<a href="/admin">Admin</a>
+				</li>
+                <li>
+					<a href="/accounts/register">Setup</a>
 				</li>
 			</ul>
 		</div>
@@ -148,8 +166,9 @@ a {
             <th>購買</th>
             <th>改票</th>
         </tr>
-        {% for b in Airplanes %}
+
         <tr>
+        {% for b in Airplanes %}
             <td> {{ b.airplaneticketid }} </td>
             <td> {{ b.destination }} </td>
             <td> {{ b.starttime }} </td>
@@ -160,13 +179,14 @@ a {
             <td> {{ b.seatingplace }} </td>
             <td>
                 {% if request.user.is_authenticated %}
-                <a href="https://paypal.me/sunnymak1228?locale.x=zh_HK">Buy</a>
+                    <a href="https://www.paypal.me/sunnymak1228?locale.x=zh_HK" onclick="alert('You will go to pay now')">Buy</a>
                     {% else %}
                     <a href="/accounts/login/">Login&Buy</a>
                 {% endif %}</td>
-            <td><button onclick="alert('聯絡客服:\nEmail: 170010292@stu.vtc.edu.hk\nPhoneNo.: 23332333')">Edit</button></td>
+            <td class="ce11100 column"><button onclick="alert('聯絡客服:\nEmail: 170010292@stu.vtc.edu.hk\nPhoneNo.: 23332333')">Edit</button></td>
         </tr>
-    </table>
     {% endfor %}
+    </table>
+
 </body>
 </html>

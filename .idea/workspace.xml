@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee2e90c8-85e0-4ac3-8d7f-a5e40e1398d6" name="fyp" comment="202005091708">
+    <list default="true" id="ee2e90c8-85e0-4ac3-8d7f-a5e40e1398d6" name="fyp" comment="202005091808">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/g05/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/g05/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fyp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fyp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/g05/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/g05/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/movie.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/themepark.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/themepark.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tour.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tour.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/travel.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/travel.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +142,13 @@
       <workItem from="1589012337546" duration="592000" />
       <workItem from="1589015090814" duration="245000" />
       <workItem from="1589015781154" duration="1734000" />
-      <workItem from="1589017632862" duration="1219000" />
+      <workItem from="1589017632862" duration="1310000" />
+      <workItem from="1589127293510" duration="1356000" />
+      <workItem from="1589129178993" duration="1644000" />
+      <workItem from="1589130994613" duration="1667000" />
+      <workItem from="1589132881962" duration="1671000" />
+      <workItem from="1589134794594" duration="1654000" />
+      <workItem from="1589136585721" duration="643000" />
     </task>
     <task id="LOCAL-00001" summary="202001022113">
       <created>1577970844935</created>
@@ -231,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589015324738</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="202005091808">
+      <created>1589018901871</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1589018901871</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,33 +281,34 @@
     <MESSAGE value="202004301243" />
     <MESSAGE value="202005091707" />
     <MESSAGE value="202005091708" />
-    <option name="LAST_COMMIT_MESSAGE" value="202005091708" />
+    <MESSAGE value="202005091808" />
+    <option name="LAST_COMMIT_MESSAGE" value="202005091808" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="496" y="27" key="CommitChangelistDialog2" timestamp="1589015319115">
+    <state x="496" y="27" key="CommitChangelistDialog2" timestamp="1589018886286">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="496" y="27" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589015319115" />
+    <state x="496" y="27" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589018886286" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1588860008809">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588860008809" />
-    <state width="1876" height="277" key="GridCell.Tab.0.bottom" timestamp="1589018864376">
+    <state width="1876" height="277" key="GridCell.Tab.0.bottom" timestamp="1589137401288">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589018864376" />
-    <state width="1876" height="277" key="GridCell.Tab.0.center" timestamp="1589018864376">
+    <state width="1876" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589137401288" />
+    <state width="1876" height="277" key="GridCell.Tab.0.center" timestamp="1589137401288">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589018864376" />
-    <state width="1876" height="277" key="GridCell.Tab.0.left" timestamp="1589018864376">
+    <state width="1876" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589137401288" />
+    <state width="1876" height="277" key="GridCell.Tab.0.left" timestamp="1589137401288">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589018864376" />
-    <state width="1876" height="277" key="GridCell.Tab.0.right" timestamp="1589018864376">
+    <state width="1876" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589137401288" />
+    <state width="1876" height="277" key="GridCell.Tab.0.right" timestamp="1589137401288">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589018864376" />
+    <state width="1876" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589137401288" />
     <state width="1876" height="342" key="GridCell.Tab.1.bottom" timestamp="1587589879590">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -307,13 +325,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1876" height="342" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587589879589" />
-    <state x="416" y="196" key="Vcs.Push.Dialog.v2" timestamp="1589015326412">
+    <state x="416" y="196" key="Vcs.Push.Dialog.v2" timestamp="1589018951588">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="416" y="196" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589015326412" />
-    <state x="543" y="305" key="com.intellij.ide.util.TipDialog" timestamp="1589017633265">
+    <state x="416" y="196" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589018951588" />
+    <state x="543" y="305" key="com.intellij.ide.util.TipDialog" timestamp="1589136579644">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="543" y="305" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589017633265" />
+    <state x="543" y="305" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589136579644" />
   </component>
 </project>
