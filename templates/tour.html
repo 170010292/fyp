@@ -134,9 +134,12 @@ a {
 				<li>
 					<a href="/admin">Admin</a>
 				</li>
+                {% if request.user.is_authenticated %}
+                {% else %}
                 <li>
 					<a href="/accounts/register">Setup</a>
 				</li>
+                {% endif %}
 			</ul>
 		</div>
 	</div>
