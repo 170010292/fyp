@@ -25,7 +25,7 @@ SECRET_KEY = 'j$27drco4!u!swfn*x3kk7^wkenv-+g)uvsgxa^y*#m)e(^z8@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,8 +80,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'fyp',
         'USER': 'root',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
+        'PASSWORD': '!A123456',
+        'HOST': 'fyp.clzyxgqi9ulx.us-east-1.rds.amazonaws.com',
         'PORT': '3306'
     }
 }
